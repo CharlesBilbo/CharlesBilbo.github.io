@@ -1,478 +1,84 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Confetti Falling Animation Example</title>
-    <!-- Style Sheets -->
-    <link href="https://www.cssscript.com/wp-includes/css/sticky.css?0924" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/darkly/bootstrap.min.css">
-    <link rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
-    <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
-    <link rel='stylesheet' href="styles.css">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="v89DdnQkIKNda7dq5CvWNnV5_Syq1c8mwqG-dTRego4" />
+    <meta name="msvalidate.01" content="64BF25824CC6C33958A82528124B1684" />
+    <meta name="description" content="The Serra Automotive Group has been serving Baton Rouge, South Louisiana and Southern Mississippi for over 70 years. We proudly offer over 1500 new cars, with the award winning lineup of new Hondas, Mazdas and Toyotas."
+    />
+    <title>Serra Automotive Group | Baton Rouge, Louisiana</title>
+    <link rel='stylesheet' id='x-google-fonts-css' href='//fonts.googleapis.com/css?family=Lato%3A400%2C400italic%2C700%2C700italic&#038;subset=latin%2Clatin-ext&#038;ver=1.1.1' type='text/css' media='all' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/stylesheets/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 
-<body id="body" class="overflow">
-    <div class="container">
-        <div id="main-row" class="row h-100">
-            <div id='button-container' class="col-md-12 my-auto text-center m-col">
-                <div class="fancy-button btn-ano">
-                    <div class="left-frills frills" style="display: inline-block;"></div>
-                    <button id="button" style="display: inline-block;"></button>
-                    <div class="right-frills frills" style="display: inline-block;"></div>
-                </div>
-            </div>
-            <canvas id="canvas"></canvas>
-            <div id="logo-container" class="col-md-12 text-center h-50">
-                <div class="logo">
-                    <!-- 1x1 image for gif -->
-                    <img id="img" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSofPIzPPpL-LvOF9j6biu7icRFoX3pmHw9gTVg4yli55uCg7vO">
-                </div>
-            </div>
-            <!-- hide class untill its called  -->
-            <div id="change-log" class="col-md-12 mt-5 text-center">
-                <h1 class="d-none typewriter"> > SPRINT 20.20 B IS NOW LIVE</h1>
-                <a id="changelog-link" class="typewriter-secondary" href="#change-log"></a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 change-log" style="border: dashed 2px;">
-                <H1 class="text-center mt-2">CHANGE LOG</H1>
-                <ul>
-                    <li>
-                        <h2>TASK-IQ</h2>
-                        <ul>
-                            <li>
-                                <h3>BUGS</h3>
-                                <ul>
-                                    <li>THIS IS A BUG</li>
-                                    <hr style="border-top: dashed 1px;" />
-                                    <li>THIS IS A BUG</li>
-                                    <hr style="border-top: dashed 1px;" />
-                                    <li>THIS IS A BUG</li>
-                                    <hr style="border-top: dashed 1px;" />
-                                    <li>THIS IS A BUG</li>
-                                    <hr style="border-top: dashed 1px;" />
-                                </ul>
-                            </li>
-                            <li>
-                                <h3>FEATURES</h3>
-                                <ul>
-                                    <li>THIS IS A BUG</li>
-                                    <hr style="border-top: dashed 1px;" />
-                                    <li>THIS IS A BUG</li>
-                                    <hr style="border-top: dashed 1px;" />
-                                    <li>THIS IS A BUG</li>
-                                    <hr style="border-top: dashed 1px;" />
-                                    <li>THIS IS A BUG</li>
-                                    <hr style="border-top: dashed 1px;" />
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h2>PORTAL</h2>
-                        <ul>
-                            <li>
-                                <h3>BUGS</h3>
-                                <ul>
-                                    <li>THIS IS A BUG</li>
-                                    <hr style="border-top: dashed 1px;" />
-                                    <li>THIS IS A BUG</li>
-                                    <hr style="border-top: dashed 1px;" />
-                                    <li>THIS IS A BUG</li>
-                                    <hr style="border-top: dashed 1px;" />
-                                    <li>THIS IS A BUG</li>
-                                    <hr style="border-top: dashed 1px;" />
-                                </ul>
-                            </li>
-                            <li>
-                                <h3>FEATURES</h3>
-                                <ul>
-                                    <li>THIS IS A BUG</li>
-                                    <hr style="border-top: dashed 1px;" />
-                                    <li>THIS IS A BUG</li>
-                                    <hr style="border-top: dashed 1px;" />
-                                    <li>THIS IS A BUG</li>
-                                    <hr style="border-top: dashed 1px;" />
-                                    <li>THIS IS A BUG</li>
-                                    <hr style="border-top: dashed 1px;" />
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+<body>
+    <div class="container-fluid mb-3">
+        <div class="row justify-content-center">
+            <div class="col-md-12 p-0 text-center">
+                <img class="w-100 my-5" src="images/line-up.jpg">
+                <img class="w-50" class="mx-auto" src="images/honda-mazda.png">
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="row no-margin text-center">
+            <h1 class="w-100 text-center"><strong>JOIN THE SERRA AUTOMOTIVE GROUP!<strong></strong></h1>
+            <p> The Serra Automotive Group has been serving Brighton, Ann Arbor, Lansing, Detroit, Flint, Commerce Township and surounding areas. We proudly offer over 1500 new cars, with the award winning lineup of new Hondas and Mazdas</p>
+            <p>For those in need of vehicle repair, our Serra Collision Center welcomes all makes and models, and works with all insurance companies. We also have Enterprise rental car located on site to help customers get back on the road quickly and efficiently
+                while our certified trained staff repairs the vehicle.
+            </p>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-6 col-lg-6 mb-5">
+                <a target="_blank" href="//www.Serra-toyota.com">
+                    <img class="w-50" src="images/honda.png" />
+                </a>
+                <h4 class="mt-3"><strong>Serra Honda</strong></h4>
+                <a class="lead" target="_blank" href="https://goo.gl/maps/j4KfCCgqZqcWfgXo9">
+                    <span> 8294 Grand River Ave,</span><br />
+                    <span>Brighton, MI 48114</span><br />
+                </a>
+                <a href="tel:8104946100" class="btn btn-secondary text-white"><i class="fa fa-phone"></i> (810) 494-6100</a>
+                <a target="_blank" href="https://www.brightonhonda.com/" class="btn btn-secondary text-white"><i class="fa fa-globe"></i> Visit Website</a>
+            </div>
+            <div class="col-md-6 col-lg-6 mb-5">
+                <a target="_blank" href="https://www.brightonhonda.com/">
+                    <img class="w-50" src="images/honda.png" />
+                </a>
+                <h4 class="mt-3"><strong>Serra Mazda</strong></h4>
+                <a class="lead" target="_blank" href="//goo.gl/maps/TxYrN5jzvQx">
+                    <span>8282 Grand River Ave,</span><br />
+                    <span>Brighton, MI 48114</span><br />
+                </a>
+                <a href="tel:8449900345" class="btn btn-secondary text-white"><i class="fa fa-phone"></i> (844) 990-0345</a>
+                <a target="_blank" href="https://www.brightonmazdausa.com/" class="btn btn-secondary text-white"><i class="fa fa-globe"></i> Visit Website</a>
+            </div>
+            <p>For those looking for the quality of a new car but not wanting to pay a new car price, then our new used car site is the place for one stop shopping. At <a href='www.brightonmazdausa.com' target="_blank">brightonmazdausa.com</a> and <a href="https://www.brightonhonda.com/"
+                    target="_blank">brightonhonda.com</a>, you can search our entire inventory of certified Hondas and Mazdas, as well as quality pre-owned vehicles. We will help you find just the right vehicle to fit your needs while saving you thousands
+                in the process.
+                <p style="padding:30px;">Whether its sales or service youre looking for, the Serra Automotive Group is here for you. Just call, click, or come by, and we look forward to welcoming you to the Serra!!
+                </p>
+                <div class="container" style="display:flex; flex-direction:column; padding-bottom:20px;">
+                    <small>Based on 2018 new car retail sales of American Honda Motors</small>
+                </div>
+        </div>
+    </div>
+    <div class="row no-margin bg-light border-top py-3 copyright">
+        <div class="col-12 text-center">
+            <span>Powered by <span class="text-danger">Serra Automotive Group</span></span>
+        </div>
+    </div>
 </body>
-<script src="https://cdn.jsdelivr.net/gh/mathusummut/confetti.js/confetti.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script>
-    var captionEl = $('#changelog-link');
-    var captionLength = 0;
-    var caption = 'VIEW CHANGELOG';
-
-    $(function() {
-        $("#button").click(function() {
-            $("#button").addClass("onclic").delay(2500).queue(function(next) {
-                $(this).removeClass("onclic");
-                $(this).addClass('validate');
-                $('.fancy-button').addClass('active');
-                setTimeout(function() {
-                    $('.fancy-button').addClass('scale-out-center');
-                }, 1000);
-                setTimeout(playGif, 2000);
-                setTimeout(startConfetti, 2500);
-                setTimeout(typewriter, 5000)
-                setTimeout(function() {
-                    loop();
-                }, 6000)
-            });
-        });
-
-        function typewriter() {
-            $('.typewriter').removeClass('d-none');
-            $('.typewriter').addClass('primary-text');
-            setTimeout(function() {
-                $('.typewriter-secondary').addClass('secondary-text');
-                caption = 'VIEW CHANGELOG'
-                type();
-            }, 2500);
-        }
-
-        $("a").click(function() {
-            $('body').removeClass('overflow');
-            $('#main-row').removeClass('h-100');
-            setTimeout(function() {
-                var elements = [
-                    'logo-container',
-                    'button-container',
-                ]
-                var arrayLength = elements.length;
-                for (var i = 0; i < arrayLength; i++) {
-                    $('#' + elements[i]).hide();
-                }
-                ErasingEffect();
-            }, 1000)
-        });
-    });
-
-    function ErasingEffect() {
-        caption = captionEl.html();
-        captionLength = caption.length;
-        if (captionLength > 0) {
-            erase();
-        }
-    }
-
-    function erase() {
-        captionEl.html(caption.substr(0, captionLength--));
-        if (captionLength >= 0) {
-            setTimeout('erase()', 75);
-        } else {
-            caption = 'ENJOY !';
-            captionLength = 0;
-            type();
-        }
-    }
-
-    function type() {
-        captionEl.html(caption.substr(0, captionLength++));
-        if (captionLength < caption.length + 1) {
-            setTimeout('type()', 75);
-        } else {
-            captionLength = 0;
-            caption = '';
-        }
-    }
-
-    function playGif() {
-        var image = new Image();
-        image.src = 'chd.gif';
-        $('#img').attr('src', image.src);
-        $('.m-col').addClass('d-none');
-    }
-
-    function startConfetti() {
-        confetti.start(5000, 50, 150);
-    }
-
-    window.requestAnimFrame = (function() {
-        return window.requestAnimationFrame ||
-            window.webkitRequestAnimationFrame ||
-            window.mozRequestAnimationFrame ||
-            function(callback) {
-                window.setTimeout(callback, 1000 / 60);
-            };
-    })();
-    var canvas = document.getElementById('canvas'),
-        ctx = canvas.getContext('2d'),
-        // full screen dimensions
-        cw = window.innerWidth,
-        ch = window.innerHeight,
-        // firework collection
-        fireworks = [],
-        // particle collection
-        particles = [],
-        // starting hue
-        hue = 120,
-        // when launching fireworks with a click, too many get launched at once without a limiter, one launch per 5 loop ticks
-        limiterTotal = 5,
-        limiterTick = 0,
-        // this will time the auto launches of fireworks, one launch per 80 loop ticks
-        timerTotal = 80,
-        timerTick = 0,
-        mousedown = false,
-        // mouse x coordinate,
-        mx,
-        // mouse y coordinate
-        my;
-
-    // set canvas dimensions
-    canvas.width = cw;
-    canvas.height = ch;
-
-    // now we are going to setup our function placeholders for the entire demo
-
-    // get a random number within a range
-    function random(min, max) {
-        return Math.random() * (max - min) + min;
-    }
-
-    // calculate the distance between two points
-    function calculateDistance(p1x, p1y, p2x, p2y) {
-        var xDistance = p1x - p2x,
-            yDistance = p1y - p2y;
-        return Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
-    }
-
-    // create firework
-    function Firework(sx, sy, tx, ty) {
-        // actual coordinates
-        this.x = sx;
-        this.y = sy;
-        // starting coordinates
-        this.sx = sx;
-        this.sy = sy;
-        // target coordinates
-        this.tx = tx;
-        this.ty = ty;
-        // distance from starting point to target
-        this.distanceToTarget = calculateDistance(sx, sy, tx, ty);
-        this.distanceTraveled = 0;
-        // track the past coordinates of each firework to create a trail effect, increase the coordinate count to create more prominent trails
-        this.coordinates = [];
-        this.coordinateCount = 3;
-        // populate initial coordinate collection with the current coordinates
-        while (this.coordinateCount--) {
-            this.coordinates.push([this.x, this.y]);
-        }
-        this.angle = Math.atan2(ty - sy, tx - sx);
-        this.speed = 5;
-        this.acceleration = 1.05;
-        this.brightness = random(50, 70);
-        // circle target indicator radius
-        this.targetRadius = 1;
-    }
-
-    // update firework
-    Firework.prototype.update = function(index) {
-        // remove last item in coordinates array
-        this.coordinates.pop();
-        // add current coordinates to the start of the array
-        this.coordinates.unshift([this.x, this.y]);
-
-        // cycle the circle target indicator radius
-        if (this.targetRadius < 8) {
-            this.targetRadius += 0.3;
-        } else {
-            this.targetRadius = 1;
-        }
-
-        // speed up the firework
-        this.speed *= this.acceleration;
-
-        // get the current velocities based on angle and speed
-        var vx = Math.cos(this.angle) * this.speed,
-            vy = Math.sin(this.angle) * this.speed;
-        // how far will the firework have traveled with velocities applied?
-        this.distanceTraveled = calculateDistance(this.sx, this.sy, this.x + vx, this.y + vy);
-
-        // if the distance traveled, including velocities, is greater than the initial distance to the target, then the target has been reached
-        if (this.distanceTraveled >= this.distanceToTarget) {
-            createParticles(this.tx, this.ty);
-            // remove the firework, use the index passed into the update function to determine which to remove
-            fireworks.splice(index, 1);
-        } else {
-            // target not reached, keep traveling
-            this.x += vx;
-            this.y += vy;
-        }
-    }
-
-    // draw firework
-    Firework.prototype.draw = function() {
-        ctx.beginPath();
-        // move to the last tracked coordinate in the set, then draw a line to the current x and y
-        ctx.moveTo(this.coordinates[this.coordinates.length - 1][0], this.coordinates[this.coordinates.length - 1][1]);
-        ctx.lineTo(this.x, this.y);
-        ctx.strokeStyle = 'hsl(' + hue + ', 100%, ' + this.brightness + '%)';
-        ctx.stroke();
-
-        ctx.beginPath();
-        // draw the target for this firework with a pulsing circle
-        ctx.arc(this.tx, this.ty, this.targetRadius, 0, Math.PI * 2);
-        ctx.stroke();
-    }
-
-    // create particle
-    function Particle(x, y) {
-        this.x = x;
-        this.y = y;
-        // track the past coordinates of each particle to create a trail effect, increase the coordinate count to create more prominent trails
-        this.coordinates = [];
-        this.coordinateCount = 5;
-        while (this.coordinateCount--) {
-            this.coordinates.push([this.x, this.y]);
-        }
-        // set a random angle in all possible directions, in radians
-        this.angle = random(0, Math.PI * 2);
-        this.speed = random(1, 10);
-        // friction will slow the particle down
-        this.friction = 0.95;
-        // gravity will be applied and pull the particle down
-        this.gravity = 1;
-        // set the hue to a random number +-50 of the overall hue variable
-        this.hue = random(hue - 50, hue + 50);
-        this.brightness = random(50, 80);
-        this.alpha = 1;
-        // set how fast the particle fades out
-        this.decay = random(0.015, 0.03);
-    }
-
-    // update particle
-    Particle.prototype.update = function(index) {
-        // remove last item in coordinates array
-        this.coordinates.pop();
-        // add current coordinates to the start of the array
-        this.coordinates.unshift([this.x, this.y]);
-        // slow down the particle
-        this.speed *= this.friction;
-        // apply velocity
-        this.x += Math.cos(this.angle) * this.speed;
-        this.y += Math.sin(this.angle) * this.speed + this.gravity;
-        // fade out the particle
-        this.alpha -= this.decay;
-
-        // remove the particle once the alpha is low enough, based on the passed in index
-        if (this.alpha <= this.decay) {
-            particles.splice(index, 1);
-        }
-    }
-
-    // draw particle
-    Particle.prototype.draw = function() {
-        ctx.beginPath();
-        // move to the last tracked coordinates in the set, then draw a line to the current x and y
-        ctx.moveTo(this.coordinates[this.coordinates.length - 1][0], this.coordinates[this.coordinates.length - 1][1]);
-        ctx.lineTo(this.x, this.y);
-        ctx.strokeStyle = 'hsla(' + this.hue + ', 100%, ' + this.brightness + '%, ' + this.alpha + ')';
-        ctx.stroke();
-    }
-
-    // create particle group/explosion
-    function createParticles(x, y) {
-        // increase the particle count for a bigger explosion, beware of the canvas performance hit with the increased particles though
-        var particleCount = 30;
-        while (particleCount--) {
-            particles.push(new Particle(x, y));
-        }
-    }
-
-    // main demo loop
-    function loop() {
-        // this function will run endlessly with requestAnimationFrame
-        requestAnimFrame(loop);
-
-        // increase the hue to get different colored fireworks over time
-        //hue += 0.5;
-
-        // create random color
-        hue = random(0, 360);
-
-        // normally, clearRect() would be used to clear the canvas
-        // we want to create a trailing effect though
-        // setting the composite operation to destination-out will allow us to clear the canvas at a specific opacity, rather than wiping it entirely
-        ctx.globalCompositeOperation = 'destination-out';
-        // decrease the alpha property to create more prominent trails
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
-        ctx.fillRect(0, 0, cw, ch);
-        // change the composite operation back to our main mode
-        // lighter creates bright highlight points as the fireworks and particles overlap each other
-        ctx.globalCompositeOperation = 'lighter';
-
-        // loop over each firework, draw it, update it
-        var i = fireworks.length;
-        while (i--) {
-            fireworks[i].draw();
-            fireworks[i].update(i);
-        }
-
-        // loop over each particle, draw it, update it
-        var i = particles.length;
-        while (i--) {
-            particles[i].draw();
-            particles[i].update(i);
-        }
-
-        // launch fireworks automatically to random coordinates, when the mouse isn't down
-        if (timerTick >= timerTotal) {
-            if (!mousedown) {
-                // start the firework at the bottom middle of the screen, then set the random target coordinates, the random y coordinates will be set within the range of the top half of the screen
-                fireworks.push(new Firework(cw / 2, ch, random(0, cw), random(0, ch / 2)));
-                timerTick = 0;
-            }
-        } else {
-            timerTick++;
-        }
-
-        // limit the rate at which fireworks get launched when mouse is down
-        if (limiterTick >= limiterTotal) {
-            if (mousedown) {
-                // start the firework at the bottom middle of the screen, then set the current mouse coordinates as the target
-                fireworks.push(new Firework(cw / 2, ch, mx, my));
-                limiterTick = 0;
-            }
-        } else {
-            limiterTick++;
-        }
-    }
-
-    // mouse event bindings
-    // update the mouse coordinates on mousemove
-    canvas.addEventListener('mousemove', function(e) {
-        mx = e.pageX - canvas.offsetLeft;
-        my = e.pageY - canvas.offsetTop;
-    });
-
-    // toggle mousedown state and prevent canvas from being selected
-    canvas.addEventListener('mousedown', function(e) {
-        e.preventDefault();
-        mousedown = true;
-    });
-
-    canvas.addEventListener('mouseup', function(e) {
-        e.preventDefault();
-        mousedown = false;
-    });
-
-    // once the window loads, we are ready for some fireworks
-</script>
 
 </html>
